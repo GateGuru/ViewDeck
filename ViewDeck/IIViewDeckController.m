@@ -1268,12 +1268,13 @@ __typeof__(h) __h = (h);                                    \
         self.centerTapper = [UIButton buttonWithType:UIButtonTypeCustom];
         self.centerTapper.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.centerTapper.frame = [self.centerView bounds];
-        [self.centerView addSubview:self.centerTapper];
         [self.centerTapper addTarget:self action:@selector(centerTapped) forControlEvents:UIControlEventTouchUpInside];
         self.centerTapper.backgroundColor = [UIColor clearColor];
         
     }
+    [self.centerView addSubview:self.centerTapper];
     self.centerTapper.frame = [self.centerView bounds];
+
     [self addPanners];
 }
 
